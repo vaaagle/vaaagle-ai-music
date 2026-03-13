@@ -1,0 +1,15 @@
+node_modules/
+dist/
+release/
+.electron-data/
+
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.env
+.env.*
+
+.DS_Store
+Thumbs.db

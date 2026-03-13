@@ -1,0 +1,80 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "AI-enabled music player client with Electron",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "dev:renderer": "vite --port 5188 --strictPort",
+    "dev:electron": "electron .",
+    "build": "vite build",
+    "preview": "vite preview",
+    "dist:win": "npm run build && electron-builder --win --x64",
+    "dist:setup": "npm run build && electron-builder --win nsis --x64",
+    "dist:portable": "npm run build && electron-builder --win portable --x64",
+    "dist:web": "npm run build && electron-builder --win nsis-web --x64"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.13.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.4",
+    "concurrently": "^9.2.1",
+    "electron": "^41.0.0",
+    "electron-builder": "^26.0.12",
+    "png-to-ico": "^3.0.1",
+    "vite": "^7.3.1",
+    "wait-on": "^9.0.4"
+  },
+  "build": {
+    "appId": "com.vaaagle.music",
+    "productName": "Vaaagle AI Music",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**",
+      "electron/**",
+      "config/**",
+      "package.json",
+      "node_modules/**/*"
+    ],
+    "asar": true,
+    "asarUnpack": [
+      "**/*.node"
+    ],
+    "compression": "maximum",
+    "npmRebuild": false,
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}

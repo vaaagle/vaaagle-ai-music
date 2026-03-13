@@ -1,0 +1,21 @@
+{
+  "openai": {
+    "baseUrl": "https://api.siliconflow.cn/v1",
+    "backupEndpoints": [],
+    "apiKey": "sk-owrqdjqzmmdudymicblwstqdwonfbjpqooebhmctzfiiknde",
+    "model": "Pro/moonshotai/Kimi-K2.5",
+    "requestTimeoutMs": 20000,
+    "connectTimeoutMs": 8000,
+    "maxRetries": 2
+  },
+  "music": {
+    "apiBase": "https://music-api.gdstudio.xyz/api.php",
+    "source": "netease",
+    "sources": ["netease", "kuwo", "joox", "bilibili", "tencent", "tidal", "spotify", "ytmusic", "qobuz", "deezer", "migu", "kugou", "ximalaya", "apple"],
+    "searchCount": 20,
+    "bitrate": 320
+  },
+  "player": {
+    "playMode": "loop"
+  }
+}
