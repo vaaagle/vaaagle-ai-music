@@ -2,7 +2,7 @@
   "openai": {
     "baseUrl": "https://api.siliconflow.cn/v1",
     "backupEndpoints": [],
-    "apiKey": "sk-owrqdjqzmmdudymicblwstqdwonfbjpqooebhmctzfiiknde",
+    "apiKey": "sk-",
     "model": "Pro/moonshotai/Kimi-K2.5",
     "requestTimeoutMs": 20000,
     "connectTimeoutMs": 8000,
